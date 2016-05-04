@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Merriweather;
+}
+img {
+  width: 100%;
+}
+h1 {
+  font-weight: bold;
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: silver;
+  margin-bottom: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+p {
+  color: grey;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 20px;
+}
+
+}
