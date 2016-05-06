@@ -1,26 +1,58 @@
-body {
-  margin: 0;
-  font-family: Merriweather;
+.header {
+  margin: 0 auto;
+  background-image: url("anakin.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 405px;
+  width: 1265px;
+  margin-top: -35px;
+  font-family: Abril Fatface;
+  color: #222;
 }
-img {
-  width: 100%;
-}
-h1 {
-  font-weight: bold;
-  color: black;
+
+.name1 {
+  margin-left: 22%;
+  padding-top: 250px;
   font-size: 35px;
-  text-align: center;
 }
-h2 {
-  text-align: center;
-  color: silver;
-  margin-bottom: auto;
-  margin-left: 20%;
-  margin-right: 20%;
+
+.name2 {
+  margin-left: 22%;
+  margin-top: -50px;
+  font-size: 65px;
 }
-p {
-  color: grey;
-  margin-left: 25%;
-  margin-right: 25%;
-  font-size: 20px;
+
+.main {
+  font-family: Josefin Sans;
+  color: #222;
+  margin-left: 22%;
+  margin-right: 22%;
+  font-size: 22px;
+  margin-top : 40px;
+}
+
+li {
+  list-style-type: square;
+}
+
+.together {
+  font-family: Abril Fatface;
+  background-color: rgb(68, 68, 68);;
+  font-size: 50px;
+  margin: 10px;
+  color: white;
+  width: 800px;
+  height: 100px;
+  padding: 20px;
+}
+
+.ifind {
+  height: 150px;
+}
+
+.line {
+  height: 3px;
+  color: black;
+  padding: 0px;
 }
