@@ -1,0 +1,83 @@
+header {
+  height: 402px;
+  margin: -8px auto auto auto;
+  background-position: center;
+  width: 100%;
+  background-image: url("Mulio.jpg");
+  background-repeat: no-repeat;
+  border: solid red 4px;
+  font-family: "Abril Fatface";
+  color: #222;
+  font-weight: 300;
+  color: red;
+}
+
+main h3 h4 {
+  font-weight: bold;
+}
+
+.welcome-msg {
+  margin-left: 22%;
+  padding-top: 200px;
+  font-size: 35px;
+}
+
+.anakin {
+  margin-left: 22%;
+  margin-top: -50px;
+  font-size: 65px;
+}
+
+main {
+  font-family: "Josefin Sans", sans-serif;
+  color: #222;
+  width: 700px;
+  font-size: 19px;
+  margin: 80px auto 0 auto;
+}
+
+li {
+  list-style-type: square;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin-top: 40px;
+  font-size: 21px;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+h5 {
+  margin-top: -20px;
+
+}
+
+.together {
+  background-image: url(quo.jpg);
+  background-size: 60px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  font-family: Abril Fatface;
+  background-color: rgb(68, 68, 68);;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-left: -50px;
+  color: white;
+  width: 750px;
+  height: 100px;
+  padding: 25px;
+  padding-top: 50px;
+}
+
+.ifind {
+  height: 150px;
+}
+
+.line {
+  height: 3px;
+  color: black;
+  padding: 0px;
+}
