@@ -25,13 +25,11 @@ body {
 
 .left {
   align-items: stretch;
-  background: black;
   width: 70px;
   height: 550px;
 }
 
 .middle {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 660px;
@@ -65,7 +63,6 @@ body {
 }
 
 .right {
-  background: black;
   width: 70px;
   height: 550px;
 }
