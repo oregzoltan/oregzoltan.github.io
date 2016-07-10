@@ -1,0 +1,78 @@
+body {
+  background-color: #50e3c2;
+}
+
+.task {
+  display: inline;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.addButton {
+  margin-left: -4px;
+}
+
+#textInput {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.container {
+  width : 400px;
+  height: auto;
+  background-color: #f7f7f7;
+  margin: auto;
+}
+
+.heading {
+    font-family: Lato-Light, sans-serif;
+    font-weight: normal;
+    font-size: 64px;
+    color: #9b9b9b;
+}
+
+.todo-item {
+  padding-left: 5px;
+  font-family: Lato-Regular, sans-serif;
+  font-size: 26px;
+  line-height: 2.2;
+  color: #cecece;
+  position: relative;
+}
+
+.button-text {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #df69e8;
+}
+
+.delButton {
+  position: absolute;
+  right: 45px;
+  margin-top: 12px;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  margin-left: 40px;
+  background-image: url(bin.png);
+  border: none;
+}
+
+.chkButton {
+  margin-top: 12px;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  border: none;
+  background-image: url(unchecked.png);
+}
+
+.checked.chkButton {
+  background-image: url(checked.png);
+}
