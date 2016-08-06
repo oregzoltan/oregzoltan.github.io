@@ -74,6 +74,21 @@ function addEListeners() {
   }
 }
 
+function timeSet() {
+  var setTimer = setInterval(function () {
+    time -= 1;
+    timeField.textContent = 'Time left: ' + time;
+    if (time <=0) {
+      clearInterval(setTimer);
+      alert('GAME OVER');
+      score = 0;
+      level = 1;
+      timeSet();
+      newLevel();
+    }
+  }, 1000);
+}
+
 function setSmallImgs() {
   for (var i = 0; i < 24; i++) {
     img_row[i].setAttribute('src', pictureList[i]);
@@ -87,17 +102,6 @@ function newLevel() {
   actual = {id: -1, src:''};
   scoreField.textContent = 'Your score is ' + score;
   levelField.textContent = 'Level ' + level;
-  var setTimer = setInterval(function () {
-    time -= 1;
-    timeField.textContent = 'Time left: ' + time;
-    if (time <=0) {
-      clearInterval(setTimer);
-      alert('GAME OVER');
-      score = 0;
-      level = 1;
-      newLevel();
-    }
-  }, 1000);
   getNewPictureList();
   setSmallImgs();
 }
@@ -140,3 +144,4 @@ function clickSmallImg(i) {
 
 newLevel();
 addEListeners();
+timeSet();
