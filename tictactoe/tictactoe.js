@@ -9,7 +9,7 @@ var ticTacToe = (function() {
 
   function init() {
     addEListeners();
-    if (localStorage.fields === 'undefined') {
+    if (localStorage.fields === undefined) {
       setLocalStorage();
     }
     updateFieldsAndImgs();
@@ -21,9 +21,9 @@ var ticTacToe = (function() {
     }
   }
 
-  function setLocalStorage(saveResult) {
+  function setLocalStorage() {
     localStorage.fields = 'b,b,b,b,b,b,b,b,b';
-    if (!saveResult) {
+    if (localStorage.scoreFieldX === undefined) {
       localStorage.scoreFieldX = '0';
       localStorage.scoreFieldO = '0';
     }
@@ -77,7 +77,7 @@ var ticTacToe = (function() {
         clearInterval(setTimer);
         result.textContent = '';
         incrementResult(who);
-        setLocalStorage(true);
+        setLocalStorage();
         updateFieldsAndImgs();
       }
     }, 1000);
