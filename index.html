@@ -1,21 +1,46 @@
 <!doctype html>
-<html>
+<html lang="en" ng-app="ZoltanOregApp">
   <head>
-    <meta charset="utf-8">
     <title>Zoltan Oreg's page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app-controller.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <main>
-      <ul>
-        <li><a href="/own-cv/index.html">My CV</a>
-        <li><a href="/Wikipedia/index.html">Wikipedia</a>
-        <li><a href="/gallery/index.html">Gallery</a>
-        <li><a href="/todo/index.html">Todo</a>
-        <li><a href="https://turquoise-calorie-counter.herokuapp.com/#/home">Calorie Counter</a>
-        <li><a href="/memorygame/index.html">Memory Game</a>
-        <li><a href="/tictactoe/index.html">Tic Tac Toe</a>
-      </ul>
-    </main>
+    <header>
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <h2 class="nav-brand">Zoltan Oreg</h2>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="/own-cv/greenfox_CV_zoltan_oreg.pdf" target="_blank">Download my CV</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Green Fox Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/Wikipedia/index.html" target="_blank">Copy of Wikipedia page</a></li>
+                <li><a href="/todo/index.html" target="_blank">Todo</a></li>
+                <li><a href="/gallery/index.html" target="_blank">Gallery</a></li>
+                <li><a href="https://turquoise-calorie-counter.herokuapp.com/#/home" target="_blank">Calorie Counter</a></li>
+                <li><a href="/memorygame/index.html" target="_blank">Memory Game (Use Google Chrome)</a></li>
+                <li><a href="/tictactoe/index.html" target="_blank">Tic Tac Toe (Use Google Chrome)</a></li>
+                <li><a href="/wordgame/index.html" target="_blank">Word Game</a></li>
+                <li><a href="https://student-mngmt-tool.herokuapp.com/#/" target="_blank">Student management tool</a></li>
+              </ul>
+            </li>
+            <li><a href="#/contact">Contact me</a></li>
+            <li><a href="https://hu.linkedin.com/in/zoltan-oreg-700767125" target="_blank"><img src="/assets/linkedin-3-24.png"/></a></li>
+            <li><a href="https://github.com/oregzoltan/oregzoltan.github.io" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main ng-view></main>
   </body>
 </html>

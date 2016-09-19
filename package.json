@@ -1,0 +1,23 @@
+{
+  "name": "oregzoltan.github.io",
+  "version": "1.0.0",
+  "description": "[Link to website](http://oregzoltan.github.io) [Link to repository](https://github.com/oregzoltan/oregzoltan.github.io) # Zoltan Oreg's repository Zoltan Oreg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oregzoltan/oregzoltan.github.io.git"
+  },
+  "author": "Zoltan Oreg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oregzoltan/oregzoltan.github.io/issues"
+  },
+  "homepage": "https://github.com/oregzoltan/oregzoltan.github.io#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
