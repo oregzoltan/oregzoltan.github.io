@@ -2,7 +2,6 @@
 var ZoltanOregApp = angular.module('ZoltanOregApp');
 
 ZoltanOregApp.controller('contactController', ['$scope', '$http', function($scope, $http) {
-  // $scope.result;
   $scope.resultMessage;
   $scope.formData;
   $scope.submitButtonDisabled = false;
@@ -15,11 +14,13 @@ ZoltanOregApp.controller('contactController', ['$scope', '$http', function($scop
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
         $scope.submitButtonDisabled = true;
         $scope.resultMessage = 'Thank you! I have received your message.';
+        $scope.$applyAsync();
         $scope.result='bg-success';
       }, function(err) {
         console.log("FAILED. error=", err);
         $scope.submitButtonDisabled = false;
         $scope.resultMessage = 'Message could not be sent. Mailer Error: ' + err.status;
+        $scope.$applyAsync();
         $scope.result='bg-danger';
       });
     $scope.resultMessage = 'Sending...';
