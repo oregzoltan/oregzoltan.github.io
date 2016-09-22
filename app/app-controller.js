@@ -9,7 +9,7 @@ ZoltanOregApp.controller('contactController', ['$scope', '$http', function($scop
   $scope.submit = function() {
     $scope.submitted = true;
     $scope.submitButtonDisabled = true;
-    emailjs.send("default_service","eteex2",{name: $scope.formData.inputName, email: $scope.formData.inputEmail, subject: $scope.formData.inputSubject, message: $scope.formData.inputMessage})
+    emailjs.send("gmail", "template1",{name: $scope.formData.inputName, email: $scope.formData.inputEmail, subject: $scope.formData.inputSubject, message: $scope.formData.inputMessage})
       .then(function(response) {
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
         $scope.submitButtonDisabled = true;
