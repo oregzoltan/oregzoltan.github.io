@@ -11,9 +11,3 @@ main {
   display: flex;
   justify-content:space-between;
 }
-
-@media screen and (min-width: 768px) {
-  main {
-    padding-top: 20%;
-  }
-}
