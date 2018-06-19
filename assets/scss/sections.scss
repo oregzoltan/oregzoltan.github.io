@@ -1,0 +1,217 @@
+// HEADER
+
+header {
+  height: 100vh;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+  }
+}
+
+video {
+  height: 100vh;
+  object-fit: fill;
+  position: relative;
+  width: 100%;
+}
+
+.header-content {
+  left: 50%;
+  margin-top: 17px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .row {
+    align-items: center;
+  }
+
+  .profile-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-family: 'Chicle', cursive;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+
+    @media screen and (min-width: 576px) {
+      font-size: 40px;
+      text-align: right;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 50px;
+    }
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-duration: 1s;
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-duration: 1s;
+  animation-name: fadeInRight;
+}
+
+// SECTIONS
+
+#skills, #experience, #education, #portfolio, #contact {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h2 {
+  text-align: center;
+}
+
+.content {
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 20px;
+}
+
+// SKILLS
+
+#skills {
+  background-image: url(../imgs/bg-skills.jpg);
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+  }
+}
+
+.skills-imgs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+// EXPERIENCE
+
+#experience {
+  background-image: url(../imgs/bg-experience.jpg);
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  }
+}
+
+// EDUCATION
+
+#education {
+  background-image: url(../imgs/bg-education.jpg);
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+  }
+}
+
+.content-education {
+  border-radius: 5px;
+  border: 1px solid rgb(128, 128, 128);
+  margin: 10px;
+  padding: 15px;
+}
+
+// PORTFOLIO
+
+#portfolio {
+  background-image: url(../imgs/bg-portfolio.jpg);
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  }
+}
+
+.portfolio-link-container {
+  position: relative;
+
+  .portfolio-github-link {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    img {
+      transform: scale(0);
+      transition: all 1s ease-in-out;
+      width: 30px;
+    }
+
+    &:hover img {
+      transform: scale(1);
+    }
+  }
+
+  .portfolio-image {
+    border: 1px solid rgb(34, 34, 34);
+    box-shadow: 2px 2px 5px 0px rgba(250, 250, 250, .81);
+    transition: all 1s ease;
+    width: 100%;
+
+    .portfolio-link:hover & {
+      box-shadow: 5px 5px 5px 5px rgba(200,200,200,0.81);
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  .portfolio-github-link:hover ~ .portfolio-link img {
+    box-shadow: 5px 5px 5px 5px rgba(200,200,200,0.81);
+    transform: translate(-10px, -10px);
+  }
+
+  .portfolio-link:hover ~ .portfolio-github-link img {
+        transform: scale(1);
+  }
+}
+
+// CONTACT
+
+#contact {
+  background-image: url(../imgs/bg-contact.jpg);
+
+  @media screen and (min-width: 768px) {
+    clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+  }
+}
+
+.control-label {
+  display: block;
+}
