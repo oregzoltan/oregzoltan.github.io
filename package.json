@@ -2,7 +2,7 @@
   "name": "oregzoltan.github.io",
   "version": "1.0.0",
   "description": "[Link to website](http://oregzoltan.github.io) [Link to repository](https://github.com/oregzoltan/oregzoltan.github.io) # Zoltan Oreg's repository Zoltan Oreg",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,8 +16,19 @@
     "url": "https://github.com/oregzoltan/oregzoltan.github.io/issues"
   },
   "homepage": "https://github.com/oregzoltan/oregzoltan.github.io#readme",
+  "dependencies": {
+    "bootstrap": "4.0.0",
+    "jquery": "3.3.1",
+    "jquery.easing": "^1.4.1"
+  },
   "devDependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0"
   }
 }

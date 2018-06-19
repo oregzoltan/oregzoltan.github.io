@@ -1,70 +1,230 @@
-<!doctype html>
-<html lang="en" ng-app="ZoltanOregApp">
+<!DOCTYPE html>
+<html lang="en" ng-app="ZoltanOregApp" ng-controller="mainController">
   <head>
-    <title>Zoltan Oreg's page</title>
+    <title><Z/O></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("user_fLEu3MTqyetckHxWBOJ2H");
-       })();
-    </script>
-    <script src="app/app.js"></script>
-    <script src="app/app-controller.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
+    <meta name="author" content="Zoltan Oreg">
+    <meta name="keywords" content="Zoltan Oreg, IT, software engineer, web developer, frontend developer">
+    <meta name="description" content="Zoltan Oreg, IT, software engineer, web developer, frontend developer">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="assets/imgs/zo.png" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-92234308-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </head>
-  <body>
+
+  <body id="home">
+    <div class="link-icon-containter">
+      <a href="https://hu.linkedin.com/in/zoltan-oreg-700767125" target="_blank"><img src="assets/imgs/linkedin-6-48.png"/></a>
+      <a href="https://github.com/oregzoltan/oregzoltan.github.io" target="_blank"><img src="assets/imgs/github-8-48.png"/></a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="name-effect navbar-brand js-scroll-trigger" href="#home">Zoltan Oreg</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a id="cv" class="nav-link js-scroll-trigger" href="CV_zoltan_oreg.pdf">CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <header>
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="opacity:0.9;">
-        <div class="container">
-          <h2 class="nav-brand">Zoltan Oreg</h2>
-          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mydropdown">
-            <ul class="nav navbar-nav">
-              <li><a href="#/home">Home</a></li>
-              <li><a href="/own-cv/greenfox_CV_zoltan_oreg.pdf" target="_blank">Download my CV</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Green Fox Projects<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/Wikipedia/index.html" target="_blank">Copy of Wikipedia page</a><a class="nav-right" href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/Wikipedia" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="/todo/index.html" target="_blank">Todo</a><a href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/todo" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="/gallery/index.html" target="_blank">Gallery</a><a href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/gallery" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="https://turquoise-calorie-counter.herokuapp.com/#/home" target="_blank">Calorie Counter</a><a href="https://github.com/greenfox-velox/turquoisemeals" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="/memorygame/index.html" target="_blank">Memory Game (Use Google Chrome)</a><a href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/memorygame" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="/tictactoe/index.html" target="_blank">Tic Tac Toe (Use Google Chrome)</a><a href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/tictactoe" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="/wordgame/index.html" target="_blank">Word Game</a><a href="https://github.com/oregzoltan/oregzoltan.github.io/tree/master/wordgame" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                  <li><a href="https://student-mngmt-tool.herokuapp.com/#/" target="_blank">Student management tool</a><a href="https://github.com/greenfox-velox/student_mngmt_tool_turquoise" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-                </ul>
-              </li>
-              <li><a href="#/contact">Contact me</a></li>
-              <li><a href="https://hu.linkedin.com/in/zoltan-oreg-700767125" target="_blank"><img src="/assets/linkedin-3-24.png"/></a></li>
-              <li><a href="https://github.com/oregzoltan/oregzoltan.github.io" target="_blank"><img src="/assets/github-8-24.png"/></a></li>
-            </ul>
+      <video playsinline autoplay muted loop>
+        <source src="assets/imgs/Matrix - 5581 big.mp4" type="video/mp4">
+      </video>
+      <div class="container header-content">
+        <div class="row">
+        <img class="fadeInLeft profile-img col-12 col-sm-5 offset-sm-1 col-md-6" src="assets/imgs/zo.png">
+          <h1 class="fadeInRight col-12 col-sm-5 col-md-6">Hi, I'am Zoltan Oreg Frontend Developer</h1>
+        </div>
+      </div>
+    </header>
+
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="content col-lg-8 mx-auto">
+            <h2>Skills</h2>
+            <div class="skills-imgs-container">
+              <img src="assets/icons/if_AngularJS_1012789.svg">
+              <img src="assets/icons/if_bootstrap_icon_291791.svg">
+              <img src="assets/icons/if_css3_294692.svg">
+              <img src="assets/icons/if_google_firebase_1175544.svg">
+              <img src="assets/icons/if_code-programming-javascript-software-develop-command-language_652581.svg">
+              <img src="assets/icons/gulp-plain.svg">
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <main ng-view></main>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="row">
+          <div class="content col-lg-8 mx-auto">
+            <h2>Work experience</h2>
+            <h5>Frontend Developer</h5>
+            <p>Black Swan Data</p>
+            <p>Oct 2016 – Present</p>
+            <p>Developing inflight entertainment systems.</p>
+            <p>Languages: JavaScript, CSS3, HTML5</p>
+            <p>Technologies: AngularJS, Sass, SCSS, Bootstrap</p>
+            <p>Tools: Gulp, SourceTree, NPM, Git, BitBucket, Jira, Slack</p>
+            <p>Methodology: Responsive design, Mobile first philosophy, Scrum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="row">
+          <div class="row content col-lg-8 mx-auto">
+            <h2 class="col-md-12 mx-auto">Education</h2>
+            <div class="col-md-5 mx-auto content-education">
+              <h5>May 2016 – Sept 2016</h5>
+              <p>Green Fox Academy</p>
+              <p>Junior software developer</p>
+            </div>
+            <div class="col-md-5 mx-auto content-education">
+              <h5>Dec 2015 – Jan 2016</h5>
+              <p>www.coursera.org</p>
+              <p>Programming for Everybody (Getting Started with Python), Python Data Structures, Using Python to Access Web Data, Using Databases with Python</p>
+            </div>
+            <div class="col-md-5 mx-auto content-education">
+              <h5>1998-2005</h5>
+              <p>Gábor Dénes College</p>
+              <p>Computer Engineer</p>
+              <p>Diploma</p>
+            </div>
+            <div class="col-md-5 mx-auto content-education">
+              <h5>1994-1998</h5>
+              <p>Szechenyi Istvan Economy and Foreign Trade Technical College</p>
+              <p>Computer programmer</p>
+              <p>Graduation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="content col-lg-8 mx-auto">
+            <h2>Portfolio</h2>
+            <div class="portfolio-link-container">
+              
+              <a class="portfolio-link" href="https://oregzoltan.github.io/zsofiaporzsoltphotography" target="_blank">
+                <img title="https://oregzoltan.github.io/zsofiaporzsoltphotography" class="portfolio-image" src="assets/imgs/zspp.jpg">
+              </a>
+              <a class="portfolio-github-link" href="https://github.com/oregzoltan/oregzoltan.github.io" target="_blank"><img src="assets/imgs/github-8-48.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="content col-lg-8 mx-auto">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Contact Form</h2>
+              </div>
+              <div class="panel-body">
+                <form ng-submit="submit()" name="contactform" class="form-horizontal" role="form">
+                  <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                    <label for="inputName" class="col-lg-10 mx-auto control-label">Name</label>
+                    <div class="col-lg-10 mx-auto">
+                      <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                    </div>
+                  </div>
+                  <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                    <label for="inputEmail" class="col-lg-10 mx-auto control-label">Email</label>
+                    <div class="col-lg-10 mx-auto">
+                      <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                    </div>
+                  </div>
+                  <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+                    <label for="inputSubject" class="col-lg-10 mx-auto control-label">Subject</label>
+                    <div class="col-lg-10 mx-auto">
+                      <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                    </div>
+                  </div>
+                  <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                    <label for="inputMessage" class="col-lg-10 mx-auto control-label">Message</label>
+                    <div class="col-lg-10 mx-auto">
+                      <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10 mx-auto">
+                      <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Zoltan Oreg</p>
+      </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrolling-nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="vendor/modernizr-custom.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_fLEu3MTqyetckHxWBOJ2H");
+       })();
+    </script>
   </body>
+
 </html>
