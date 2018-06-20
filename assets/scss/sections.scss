@@ -185,11 +185,11 @@ h2 {
     box-shadow: 2px 2px 5px 0px rgba(250, 250, 250, .81);
     transition: all 1s ease;
     width: 100%;
+  }
 
-    .portfolio-link:hover & {
-      box-shadow: 5px 5px 5px 5px rgba(200,200,200,0.81);
-      transform: translate(-10px, -10px);
-    }
+  .portfolio-link:hover .portfolio-image {
+    box-shadow: 5px 5px 5px 5px rgba(200,200,200,0.81);
+    transform: translate(-10px, -10px);
   }
 
   .portfolio-github-link:hover ~ .portfolio-link img {
