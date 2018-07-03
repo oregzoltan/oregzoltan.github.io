@@ -29,7 +29,6 @@ nav {
   }
 
   .nav-link {
-    color: rgb(0, 0, 0);
     display: inline-block;
     font-size: 1.25rem;
     padding-bottom: 1px;
@@ -37,7 +36,7 @@ nav {
     text-decoration: none;
 
     &:before {
-      background: radial-gradient(ellipse at center,rgba(255,255,255,.75) 0,transparent 80%);
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, .75) 0, transparent 80%);
       bottom: 0;
       content: "";
       height: 2px;
@@ -47,10 +46,6 @@ nav {
       transition: all 0.3s ease-in-out 0s;
       visibility: hidden;
       width: 100%;
-    }
-
-    &:hover {
-      color: rgb(0, 0, 0);
     }
 
     &:hover:before {
@@ -89,10 +84,14 @@ nav {
       transform: scale(1, 1);
     }
   }
+
+  .navbar-toggler {
+    outline: none;
+  }
 }
 
 .link-icon-containter {
-  bottom: 5px;
+  bottom: 1px;
   display: flex;
   left: 50%;
   position: fixed;
